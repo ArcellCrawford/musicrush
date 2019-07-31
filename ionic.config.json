@@ -1,0 +1,7 @@
+{
+  "name": "Athleterecoveryapp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

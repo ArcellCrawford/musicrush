@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Search Albums
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- <div class="middle">
+  <ion-searchbar  (ionChange)="onChange($event)"></ion-searchbar> -->
+
+  <!-- <ion-list>
+    <ion-item *ngFor="let item of items" (click)="navigateToDetails(item)">
+      {{ item.title }}
+    </ion-item>
+  </ion-list> -->
+  <!-- </div > -->
+  <div class="searchbardiv">
+
+    <ion-searchbar (ionChange)="onChange($event)" color=light></ion-searchbar>
+
+  </div>
+  <ion-list>
+    <ion-item *ngFor="let item of items" (click)="play_song(item)">
+      {{ item.attributes.name }}
+    </ion-item>
+
+  </ion-list>
+
+  <div>
+
+    <ion-item>
+      <img style="height:500px; width:500px" [src]="item.attributes.artwork.url" alt="" *ngIf="item">
+    </ion-item>
+  </div>
+
+</ion-content>
+<div ion-fixed class=fixed>
+  <button (click)="previous()" class="size">
+    <ion-icon name="skip-backward" size="large"></ion-icon>
+  </button>
+  <button id="pauseButton" (click)="pause()" (click)="show(false)" class="size">
+    <ion-icon name="pause" size="large"></ion-icon>
+  </button>
+  <!-- <ion-button data-apple-music-pause ="pause(items.attribute.url)" >pause</ion-button> -->
+  <button id="playButton" (click)="play()" (click)="show(true)" class="size">
+    <ion-icon id=play name="play" size="large"></ion-icon>
+  </button>
+  <button (click)="next()" class="size">
+    <ion-icon name="skip-forward" size="large"></ion-icon>
+  </button>
+</div>
