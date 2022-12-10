@@ -29,7 +29,7 @@
     "cordova-ios": "5.0.1",
     "cordova-res": "^0.6.0",
     "core-js": "^2.5.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "ionic-angular": "^3.9.8",
     "ionic-img-viewer": "^2.9.0",
     "rxjs": "~6.5.1",
